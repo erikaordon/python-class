@@ -1,6 +1,6 @@
-# Nombre del Proyecto
+# Nombre del Proyecto: Count A,T,C,G
 
-Fecha: 
+Fecha: 21 de marzo del 2024
 
 **Participantes**:
 
@@ -8,7 +8,7 @@ Fecha:
 
 ## Descripción del Problema
 
-
+Es un programa al que se le va a pasar un archivo con una secuencia y va a leer la de ATCG.
 
 
 ## Especificación de Requisitos
