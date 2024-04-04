@@ -1,40 +1,40 @@
 
-# [Nombre del proyecto]
+# Conteo de nucleotidos
 
-Una pequeña descripción de lo que hace el código a implementar.
+El código recibe un archivo que contiene una secuencia de nucleótidos. El programa se encarga de contar el contenido e imprime en pantalla el resultado.
 
 ## Uso
 
 El script acepta un solo argumento, el nombre del archivo a leer:
 
 ```
-python sumador.py -inputfile [archivo]
+python conteo_nucleotidos.py -inputfile [sequence.txt]
 ```
 
 
-donde `[archivo]` es el nombre del archivo que contiene ... El archivo debe contener un número por línea.
+donde `[sequence.txt]` es el nombre del archivo que contiene la secuencia de nucleótidos. 
 
 
 
 ## Salida
 
-Función: 
+Se imprime la cantidad de cada nucleótido, ya sea A, T, C o G. 
 
 ## Control de errores
 
-Si el archivo proporcionado no existe, el script generará un mensaje de error. Del mismo modo, si el archivo contiene entradas..., el script generará un error.
+Si el archivo proporcionado no existe, el script generará un mensaje de error. Del mismo modo, si el archivo contiene únicamente nucleótidos escritos con letras minúsculas, el script no podrá hacer ningún conteo.
 
 ## Pruebas
 
 El script incluye un conjunto de pruebas unitarias. Puede ejecutar estas pruebas con:
 
 ```
-python -m unittest test_sumador.py
+python -m unittest conteo_nucleotidos.py
 ```
 
 ## Datos
 
-El script está diseñado para operar en archivos de texto plano, con un número por línea. No hay restricciones en el número de líneas en el archivo.
+El script está diseñado para operar en archivos de texto plano, con los nucleótidos en mayúscula. No hay restricciones en el número de líneas en el archivo.
 
 ## Metadatos y documentación
 
@@ -48,7 +48,7 @@ El código está disponible a cambios.
 
 ## Términos de uso
 
-Este script está disponible bajo la licencia [nombre de la licencia]. Consulte el archivo LICENSE para obtener más detalles.
+Este script está disponible bajo la licencia MIT license. Consulte el archivo LICENSE para obtener más detalles.
 
 ## Como citar
 
@@ -56,4 +56,4 @@ Si utiliza este script en su trabajo, por favor cite: [información de citación
 
 ## Contáctenos
 
-Si tiene problemas o preguntas, por favor abra un problema en este repositorio o póngase en contacto con nosotros en: [información de contacto].
+Si tiene problemas o preguntas, por favor abra un problema en este repositorio o póngase en contacto con nosotros en: [erikaog@lcg.unam.mx].

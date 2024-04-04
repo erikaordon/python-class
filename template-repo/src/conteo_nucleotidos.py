@@ -1,38 +1,29 @@
 '''
-NAME  
+NAME Conteo de nucleótidos 
        
 
-VERSION 
+VERSION: primera
         
 
 AUTHOR Erika Ordoñez
         
 
-DESCRIPTION
+DESCRIPTION El programa acepta un archivo con el contenido de nucleótidos representados con letras mayúsculas, se utilizan contadores
+para contar la cantidad de As, Ts, CS y Gs para imprimir las cantidades en pantalla.  
         
-
-CATEGORY
         
 
 USAGE
 
-    % python programName
+    % python conteo_nucleotidos.py
     
-
-ARGUMENTS
-
-
-METHOD
-
-
-SEE ALSO
 
 
         
 '''
 
 # Abre el archivo y lee la secuencia de ADN
-with open('secuencia.txt', 'r') as file:
+with open('sequence.txt', 'r') as file:
     sequence = file.read()
 
 # Inicializa el contador para cada nucleótido
@@ -46,14 +37,3 @@ print("Número de A's:", count_A)
 print("Número de T's:", count_T)
 print("Número de G's:", count_G)
 print("Número de C's:", count_C)
-
-# step 1.
-
-
-# step 2.
-
-
-# step 3.
-
-
-
