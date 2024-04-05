@@ -5,7 +5,7 @@ El código recibe un archivo que contiene una secuencia de nucleótidos. El prog
 
 ## Uso
 
-El script acepta un solo argumento, el nombre del archivo a leer:
+El script acepta un solo argumento, el nombre del archivo a leer, este además debe tener obligatoriamente el nombre de sequence.txt, deotra manera el programa no podrá leer el archivo:
 
 ```
 python conteo_nucleotidos.py -inputfile [sequence.txt]
@@ -22,23 +22,19 @@ Se imprime la cantidad de cada nucleótido, ya sea A, T, C o G.
 
 ## Control de errores
 
-Si el archivo proporcionado no existe, el script generará un mensaje de error. Del mismo modo, si el archivo contiene únicamente nucleótidos escritos con letras minúsculas, el script no podrá hacer ningún conteo.
+Si el archivo proporcionado no tiene el nombre correcto, el script generará un mensaje de error. Del mismo modo, si el archivo contiene únicamente nucleótidos escritos con letras minúsculas, el script no podrá hacer ningún conteo.
 
 ## Pruebas
 
-El script incluye un conjunto de pruebas unitarias. Puede ejecutar estas pruebas con:
-
-```
-python -m unittest conteo_nucleotidos.py
-```
+Todavía no tiene control de ptruebas.
 
 ## Datos
 
-El script está diseñado para operar en archivos de texto plano, con los nucleótidos en mayúscula. No hay restricciones en el número de líneas en el archivo.
+El script está diseñado para operar en archivos tipo raw, con los nucleótidos en mayúscula. No hay restricciones en el número de líneas en el archivo.
 
 ## Metadatos y documentación
 
-Este README ofrece información de uso básico. Para obtener información más detallada sobre el diseño y la implementación del script, consulte [Enlace a la documentación].
+Este README ofrece información de uso básico. Para obtener información más detallada sobre el diseño y la implementación del script, consulte.
 También se pueden agregar nuevos datos para complementar los datos existentes. 
 
 ## Código fuente

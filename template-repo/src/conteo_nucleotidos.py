@@ -23,8 +23,13 @@ USAGE
 '''
 
 # Abre el archivo y lee la secuencia de ADN
-with open('sequence.txt', 'r') as file:
-    sequence = file.read()
+try: 
+    with open('sequence.txt', 'r') as file:
+        sequence = file.read()
+
+# Si el archivo no está nombrado como 'sequence.txt' entonces se imprime el siguiente mensaje. 
+except:
+    print("El archivo ingresado no es el correcto, favor de renombrar")
 
 # Inicializa el contador para cada nucleótido
 count_A = sequence.count('A')
