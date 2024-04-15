@@ -12,6 +12,32 @@ La ejecución exitosa de estos casos de prueba asegura que el script está listo
 
 A continuación, presentamos los detalles de los casos de prueba. Cada caso de prueba incluye una descripción del caso de prueba, los datos de entrada utilizados y el resultado esperado.
 
-En este caso en particular, no hay casos de prueba debido a que con tengo poseción de archivos con los que poder probar el presente programa, sin embargo, siempre que el archivo sea el correcto, el programa no deberá presentar problema alguno. 
+Para el presente código, se realizó un archivo con todas las eventualidades que se pueden presentar. Este archivo se llama "secuencia_prueba.txt" y se encuentra en la siguiente ubicación: "C:\Users\erika_6xdeulp\OneDrive\Escritorio\biopython\python-class\template-repo\src\secuencia_prueba.txt". 
     
- 
+ ### Caso de prueba 1: 
+
+ - Descripción: El usuario no ingresó correctamente el archivo deseado a analizar.
+ - Datos de entrada: Nombre el archivo mal escrito. 
+ - Resultado esperado: imprime el siguinete mensaje: "Error: No se pudo abrir el archivo '{nombre_del_archivo}'"
+
+### Caso de prueba 2:
+
+- Descripción: El usuario ingresa los nucleótido en minúscula o mayúscula. 
+- Datos de entrada: "A" y/o "T" y/o "C" y/o "G" y/o "a" y/o "t" y/o "c" y/o "g". 
+- Resultado esperado: Depende de la letra que ingrese el usuario. El programa muestra el número correcto de nucleótidos en el archivo. El programa es lo suficientemente robusto para aceptar tanto letras minúsculas como mayúscculas. 
+
+### Caso de prueba 3: 
+
+- Descripción: Más de una letra ingresada, además combina letras mayúsculas y minúsculas. 
+- Datos de entrada: 
+    Ejemplo: A t c G
+- Resultado esperado: La robustez del programa permite recibir cualquiera de las letras, la cantidad que sea determinado por el usuario, así como la mezcla de mayúsculas y minúsculas, imprimiendo en pantalla, la frecuencia correcta que se encuentra en el archivo. 
+
+### Caso de prueba 4: 
+
+- Descripción: El archivo, es recibido con escasa uniformidad en el formato.
+- Datos de entrada: El archivo no está escrito en un formato definido, en el se pueden encontrar: espacios, comas, tabuladores, saltos de línea
+- Resultado esperado: El conteo de nucleótidos es correcto, a pesar de todas las eventualidades. 
+
+
+
