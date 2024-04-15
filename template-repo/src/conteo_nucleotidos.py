@@ -21,21 +21,33 @@ USAGE
 
         
 '''
-import argparse 
+import argparse
 
-parser = argparse.ArgumentParser(description="Conteo de nucleótidos")
+# Crear el parser de argumentos
+parser = argparse.ArgumentParser(description='Contar la frecuencia de nucleótidos en un archivo de secuencia de ADN')
+parser.add_argument('archivo', type=str, help='Archivo de secuencia de ADN')
+parser.add_argument('-n', '--nucleotido', nargs='+', type=str, help='Nucleótido(s) a contar')
+args = parser.parse_args()
 
-# El usuario ingresa el nombre de un archivo, este es obligatorio
-parser.add_argument("input_file", type = str, help='Nombre del archivo a parsear')
-
-# Abre el archivo y lee la secuencia de ADN
+# Intentar abrir el archivo
 try:
-    args = parser.parse_args()
-    with open(args.input_file, 'r') as file:
-        sequence = file.read()
-    print(f'Proporcion de nucleotidos presentes en la secuencia: A: {sequence.count('A')}, C: {sequence.count('C')}, T:{sequence.count('T')}, G:{sequence.count('G')}')
-
-# En caso de no encontrar el archivo imprime este mensaje de error. 
+    with open(args.archivo, 'r') as file:
+        sequence = file.read().upper()
+        
+# Si no es el archivo correcto, imprime un mensaje de error
 except FileNotFoundError:
-    print(f'El archivo no fue encontrado, inténtelo de nuevo')
+    print(f"Error: No se pudo abrir el archivo '{args.archivo}'")
+    exit()
 
+# Contar la frecuencia de los nucleótidos
+if args.nucleotido:
+    for nucleotide in args.nucleotido:
+        try:
+            count = sequence.count(nucleotide.upper())
+            print(f"Frecuencia de '{nucleotide.upper()}': {count}")
+        except ValueError:
+            print(f"Error: Nucleótido '{nucleotide}' inválido")
+else:
+    for nucleotide in ['A', 'C', 'G', 'T']:
+        count = sequence.count(nucleotide)
+        print(f"Frecuencia de '{nucleotide}': {count}")
