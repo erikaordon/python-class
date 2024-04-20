@@ -22,6 +22,7 @@ USAGE
         
 '''
 import argparse
+import os
 
 # Crear el parser de argumentos
 parser = argparse.ArgumentParser(description='Contar la frecuencia de nucleótidos en un archivo de secuencia de ADN')
@@ -33,10 +34,11 @@ args = parser.parse_args()
 try:
     with open(args.archivo, 'r') as file:
         sequence = file.read().upper()
-        
-# Si no es el archivo correcto, imprime un mensaje de error
+
+# Si no es el archivo correcto o si no existe, imprime un mensaje de error
 except FileNotFoundError:
-    print(f"Error: No se pudo abrir el archivo '{args.archivo}'")
+    if os.path.exists(args.archivo)==False: 
+        print("sorry, couldn't find the file")
     exit()
 
 # Contar la frecuencia de los nucleótidos
