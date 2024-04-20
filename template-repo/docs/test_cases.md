@@ -16,28 +16,41 @@ Para el presente código, se realizó un archivo con todas las eventualidades qu
     
  ### Caso de prueba 1: 
 
- - Descripción: El usuario no ingresó correctamente el archivo deseado a analizar.
+ - Descripción: El usuario no ingresó correctamente el archivo deseado a analizar, no existe en el dispositivo o no ingresó la ruta absoluta.
  - Datos de entrada: Nombre el archivo mal escrito. 
- - Resultado esperado: imprime el siguinete mensaje: "Error: No se pudo abrir el archivo '{nombre_del_archivo}'"
+ - Resultado esperado: imprime el siguinete mensaje: "sorry, couldn't find the file"
 
 ### Caso de prueba 2:
+
+- Descripción: El usuario ingresó un archivo vacío. 
+- Datos de entrada: Nombre del archivo vacío. 
+- Resultado esperado: El programa verifica el tamaño del archivo, por lo que en caso de que este esté vacío imprimirá el siguiente mensaje de error: 
+ "sorry, the file is empty"
+
+### Caso de prueba 3:
 
 - Descripción: El usuario ingresa los nucleótido en minúscula o mayúscula. 
 - Datos de entrada: "A" y/o "T" y/o "C" y/o "G" y/o "a" y/o "t" y/o "c" y/o "g". 
 - Resultado esperado: Depende de la letra que ingrese el usuario. El programa muestra el número correcto de nucleótidos en el archivo. El programa es lo suficientemente robusto para aceptar tanto letras minúsculas como mayúscculas. 
 
-### Caso de prueba 3: 
+### Caso de prueba 4: 
 
 - Descripción: Más de una letra ingresada, además combina letras mayúsculas y minúsculas. 
 - Datos de entrada: 
     Ejemplo: A t c G
 - Resultado esperado: La robustez del programa permite recibir cualquiera de las letras, la cantidad que sea determinado por el usuario, así como la mezcla de mayúsculas y minúsculas, imprimiendo en pantalla, la frecuencia correcta que se encuentra en el archivo. 
 
-### Caso de prueba 4: 
+### Caso de prueba 5: 
 
 - Descripción: El archivo, es recibido con escasa uniformidad en el formato.
 - Datos de entrada: El archivo no está escrito en un formato definido, en el se pueden encontrar: espacios, comas, tabuladores, saltos de línea
 - Resultado esperado: El conteo de nucleótidos es correcto, a pesar de todas las eventualidades. 
 
+### Caso de prueba 6: 
+
+- Descripción: En caso de que el programa reciba letras que no correspondan a los nucleótidos o a las letras que se encuentran en el archivo.
+- Datos de entrada: 'd', 'f', 'h', 'sst'
+- Resultado esperado: El programa imprime en pantalla un el siguiente mensaje de error.
+"Sequence contains '{nucleotide}', it is invalid character" donde nucleotide es el caracter no encontrado en el archivo.   
 
 
