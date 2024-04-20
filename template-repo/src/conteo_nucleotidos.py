@@ -58,7 +58,7 @@ if os.path.getsize(args.archivo) != 0:
                 print(f"Frecuencia de '{nucleotide.upper()}': {count}")
             # Si la letra no es parte de los nucleótidos, entonces el conteo será cero y se imprimirá un mensaje de error
             # Esto suponiendo que el archivo del usuario únicamente contiene una secuencia de nucleotidos 
-            else: print(f"Error: Nucleótido '{nucleotide}' es inválido")
+            else: print(f"Sequence contains '{nucleotide}', it is invalid character")
     else:
         for nucleotide in ['A', 'C', 'G', 'T']:
             count = sequence.count(nucleotide)
