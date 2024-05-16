@@ -1,0 +1,16 @@
+# class 
+
+# Ejercicio 1: 
+
+class animal(): 
+
+    # Atributos de un objeto: 
+    def __init__(self, nombre, edad): 
+        self.nombre = nombre
+        self.edad = edad 
+
+    def haz_ruido(self):
+         print("AAAAAAHHHHHH")
+
+    # Ejercicio 2: 
+    
